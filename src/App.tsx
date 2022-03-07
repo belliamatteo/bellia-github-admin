@@ -4,6 +4,8 @@ import { Login } from './components/pages/login/Login';
 import { TypeStudent } from './types/types';
 import { DetailStudent } from "./components/detail/DetailStudent"
 import { Navbar } from "./components/pages/navbar/Navbar"
+import { Footer } from "./components/pages/footer/Footer"
+import { callApi } from "./api/callApi"
 
 function App() {
   //*****************
@@ -23,6 +25,8 @@ function App() {
       <Navbar />
       <Login />
       <DetailStudent {...student}/>
+      <button onClick={(() => callApi(student))}>call</button>
+      <Footer />
     </div>
   );
 }
