@@ -1,24 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {useState} from 'react';
 import './App.css';
+import { Login } from './components/pages/login/Login';
+import { TypeStudent } from './types/types';
+import { DetailStudent } from "./components/detail/DetailStudent"
+import { Navbar } from "./components/pages/navbar/Navbar"
 
 function App() {
+  //*****************
+  const myStudent: TypeStudent = {
+    name: "Matteo",
+    surname: "Bellia",
+    login: "matteobelliaa",
+    classe: "Full-Stack Developer 2",
+    repos: null
+  }
+
+  //Variabile di stato seza Type
+  const [student, setStudent] = useState(myStudent);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar />
+      <Login />
+      <DetailStudent {...student}/>
     </div>
   );
 }
