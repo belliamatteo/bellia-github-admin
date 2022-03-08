@@ -8,7 +8,7 @@ export function Login() {
 
       <h2 className="login-header">Log in</h2>
 
-      <form className="login-container" action="../home/Home.tsx">
+      <form className="login-container" action="http://localhost:3000">
         <p>
           <input type="email" placeholder="Email" />
         </p>

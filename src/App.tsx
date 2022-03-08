@@ -23,7 +23,6 @@ function App() {
   return (
     <div className="App">
       <Navbar />
-      <Login />
       <DetailStudent {...student}/>
       <button onClick={(() => callApi(student))}>call</button>
       <Footer />
