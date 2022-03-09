@@ -10,3 +10,12 @@ export type TypeStudent = {
     classe: string;
     repos: string[]|undefined|null;
 }
+
+export type TypeUserContext = {
+    user: TypeUser;
+}
+export type TypeUser = {
+    username: string;
+    password: string;
+    session: boolean;
+}
